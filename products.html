@@ -369,8 +369,18 @@
   </div>
 
   <a href="cart.html" class="icon-link">
-    <img src="data/images/trolley.png" alt="Cart" class="icon">
-  </a>
+  <img src="data/images/trolley.png" alt="Cart" class="icon">
+  <span id="cart-count" 
+        style="position:absolute; top:0; right:0; background:#ff914d; color:white; 
+               font-size:12px; width:18px; height:18px; border-radius:50%; 
+               display:flex; align-items:center; justify-content:center;">
+    0
+  </span>
+</a>
+
+  </span>
+</a>
+
 </div>
 
 <!-- Decorative Banner Under Top Bar -->
@@ -602,8 +612,54 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
   });
 });
 
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.getElementById('cart-count').textContent = totalItems;
+}
+
+// Call once on page load
+updateCartCount();
+
+// Add to Cart button
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    // Remove previous click listeners (if any) to prevent doubling
+    button.replaceWith(button.cloneNode(true));
+});
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+    button.addEventListener('click', function() {
+        const card = this.closest('.product-card');
+        const id = card.dataset.id;
+        const name = card.dataset.name;
+        const price = card.dataset.price;
+        const image = card.dataset.image;
+
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const existing = cart.find(item => item.id === id);
+
+        if (existing) {
+            existing.quantity += 1; // only +1 per click
+        } else {
+            cart.push({ id, name, price, image, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount(); // immediately update icon
+
+        // Visual feedback
+        this.textContent = '✔ Added';
+        this.style.background = '#28a745';
+        setTimeout(() => {
+            this.textContent = 'Add to Cart';
+            this.style.background = '#ff9900';
+        }, 800);
+    });
+});
+
 </script>
+
+
 
 </body>
 </html>
-
