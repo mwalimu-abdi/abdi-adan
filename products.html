@@ -350,7 +350,59 @@
     border-radius: 50%;
     display: block;
 }
+.footer {
+  background: #000;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
 
+.footer h2 {
+  color: #00bfff; /* bright blue for title */
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.footer h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.footer p {
+  line-height: 1.6;
+  font-size: 0.95em;
+  color: #ddd;
+}
+
+.footer a {
+  color: #00bfff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-links {
+  margin: 15px 0;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00bfff;
+}
 
 
 
@@ -1081,7 +1133,25 @@
     <button class="add-to-cart">Add to Cart</button>
 </div>
 </div>
-
+<footer class="footer">
+  <div class="footer-content">
+    <h2 class="footer-logo">MWALIMU FOOTWEAR</h2>
+    <h3>Contact Details</h3>
+    <p>Nairobi, Kenya,<br>Official email: mail.mwalimufootwear.co.ke</p>
+    <p>Phone: <a href="tel:+254117646714">+254 117646714</a></p>
+    <div class="footer-links">
+      <a href="#">Smart Sneakers</a> |
+      <a href="#">Official Boots</a> |
+      <a href="#">Fast Delivery</a>
+    </div>
+    <h4>We do fast deliveries and accept payment after delivery</h4>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/254117646714" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </div>
+</footer>
 
 
 <script>
@@ -1183,6 +1253,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 
 </body>
 </html>
+
 
 
 
