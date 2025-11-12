@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
   <title>Mwalimu Footwear | Home</title>
   <style>
     body {
@@ -141,8 +140,6 @@
       border-radius: 8px;
       cursor: pointer;
       transition: 0.3s;
-      margin-bottom: 100px;
-      
     }
     .hero-text button:hover {
       background: #ff751a;
@@ -155,382 +152,80 @@
       text-align: center;
       padding: 15px;
       font-weight: 500;
-      height: 27px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
     }
-    .contact-banner a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
+    .contact-banner img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .contact-banner img:hover {
+      transform: scale(1.1);
     }
 
     /* Footer */
     footer {
-      background: rgb(1, 1, 1);
+      background: #000;
       color: white;
       text-align: center;
-      padding: 20px 10px;
-      font-size: 0.9rem;
-      margin-top: 0px;
-      height: 48px;
-      
-  
+      padding: 40px 20px;
+      font-family: "Poppins", sans-serif;
+    }
+    footer h2 { color: #00bfff; margin-bottom: 15px; font-weight: 700; }
+    footer h3 { font-size: 1.3em; margin-bottom: 10px; color: #fff; }
+    footer p { line-height: 1.6; font-size: 0.95em; color: #ddd; }
+    footer a { color: #00bfff; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    .social-icons { margin-top: 20px; }
+    .social-icons a { color: #fff; margin: 0 10px; font-size: 1.5em; transition: color 0.3s; }
+    .social-icons a:hover { color: #00bfff; }
+
+    /* Marquee text */
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+    }
+    .marquee {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      margin-top: 5px;
+    }
+    .marquee span {
+      display: inline-block;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      background: linear-gradient(90deg, #ff914d, #ff3d6e, #007bff, #00ffb3, #ff914d);
+      background-size: 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1.2px;
+      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+      animation: scrollText 13s linear infinite, colorShift 6s ease-in-out infinite;
+    }
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    @keyframes colorShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     /* Responsive */
     @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.2rem;
-      }
-      .dropdown {
-        min-width: 180px;
-     
-      }
+      header h1 { font-size: 1.2rem; }
+      .dropdown { min-width: 180px; }
     }
-    /* WhatsApp Icon Styling */
-.whatsapp-link {
-  display: inline-block;
-}
-
-.whatsapp-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-/* Optional hover effect */
-.whatsapp-icon:hover {
-  transform: scale(1.1);
-}
-
-.call-link {
-  display: inline-block;
-}
-
-.call-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin-left: 40px;
-  margin-top: 0%;
-  
-}
-
-/* Optional hover effect */
-.call-icon:hover {
-  transform: scale(1.1);
-}
-
-.product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    padding: 10px;
-    background: #f5f5f5;
-  }
-.discount-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgb(11, 20, 025);
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 4px;
-  z-index: 2;
-}
-
-.product-card {
-    background: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: none;
-  }
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-/* Stylish Top Bar */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #0b8457, #13a47e);
-  padding: 8px 15px;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-}
-
-/* Product Card */
-.product-card {
-  position: relative;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s ease;
-  padding-bottom: 15px;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
- .product-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    border: none;
-    display: block;
-    background: #fff;
-  }
-
-.product-card h3 {
-    font-size: 14px;
-    margin: 8px 0 4px;
-    color: white;
-    font-weight: normal;
-}
-
-.product-card p {
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 0;
-}
-
-.product-card .discount-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #0b1425;
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 4px;
-  z-index: 2;
-}
-
-/* View All Products Button */
-.view-all-container {
-  text-align: center;
-  margin-top: 25px;
-}
-
-.view-all-btn {
-  background: #ff914d;
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  font-size: 1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.view-all-btn:hover {
-  background: #ff751a;
-}
-
-/* Title & Moving Text Container */
-.title-container {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
-}
-
-.marquee {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  margin-top: 5px;
-}
-
-/* Multicolor Gradient Text Animation */
-.marquee span {
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 700;
-  font-size: 1rem;
-  background: linear-gradient(90deg, #ff914d, #ff3d6e, #007bff, #00ffb3, #ff914d);
-  background-size: 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  letter-spacing: 1.2px;
-  text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-  animation: scrollText 13s linear infinite, colorShift 6s ease-in-out infinite;
-}
-
-/* Scroll Animation */
-@keyframes scrollText {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-/* Color Flow Animation */
-@keyframes colorShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-/* Slight glow to make text pop */
-.marquee span {
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.4), 
-               0 0 12px rgba(255, 145, 77, 0.6);
-}
-.footer {
-  background-color: #000; /* pure black */
-  color: #fff;
-  text-align: center;
-  padding: 40px 20px;
-  font-family: "Poppins", sans-serif;
-}
-
-.footer-content h2 {
-  color: #00bfff; /* bright sky blue for title */
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.footer-content h3 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: #ffffff;
-}
-
-.footer-content p {
-  line-height: 1.6;
-  font-size: 0.95em;
-  color: #ddd;
-}
-
-.footer-links {
-  margin: 15px 0;
-}
-
-.footer-links a {
-  color: #00bfff;
-  text-decoration: none;
-  margin: 0 5px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.payments img {
-  height: 30px;
-  margin: 10px;
-  vertical-align: middle;
-  filter: brightness(0) invert(1); /* make logos visible on black */
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5em;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #00bfff;
-}
-/* Force footer to be pure black and override other backgrounds */
-.footer,
-.footer * {
-  background-color: transparent !important; /* ensure children don't keep white backgrounds */
-  background: none !important;
-  box-shadow: none !important;
-}
-
-/* Root footer background */
-.footer {
-  background-color: #000 !important;   /* pure black */
-  color: #fff !important;
-  padding: 40px 20px !important;
-}
-
-/* If your footer content is wrapped in another container set that to black too */
-.footer .footer-content,
-.footer .container,
-.footer .footer-inner {
-  background-color: #000 !important;
-}
-
-/* Text and headings */
-.footer, 
-.footer h1, .footer h2, .footer h3, .footer h4, .footer p, 
-.footer a, .footer li {
-  color: #fff !important;
-}
-
-/* Links */
-.footer a {
-  color: #00bfff !important;
-  text-decoration: none !important;
-}
-
-/* Images (payment logos) - make them visible on black */
-.footer .payments img {
-  filter: brightness(0) invert(1) !important;
-  height: 30px !important;
-}
-
-/* Remove any white horizontal rules or borders */
-.footer hr,
-.footer .divider {
-  border-color: rgba(255,255,255,0.08) !important;
-  background: transparent !important;
-}
-
-/* Remove stray backgrounds from pseudo elements */
-.footer::before,
-.footer::after,
-.footer *::before,
-.footer *::after {
-  background: none !important;
-}
-
-
-.footer [style*="background"] {
-  background: none !important;
-  background-color: transparent !important;
-}
-
   </style>
 </head>
 <body>
@@ -544,8 +239,7 @@
         </div>
         <div class="dropdown" id="dropdown">
           <p>📞 Call: <a href="tel:+254117646714">+254117646714</a></p>
-          <p>💬 WhatsApp: <a href="https://wa.me/254117646714" target="_blank" class="whatsapp-link">
-       </p>
+          <p>💬 WhatsApp: <a href="https://wa.me/254117646714" target="_blank"></a></p>
           <a href="products.html">🛍️ Products</a>
           <p>📍 Location: Online</p>
           <a href="cart.html">🛒 Cart</a>
@@ -553,263 +247,66 @@
         </div>
       </div>
       <img src="data/images/logo.png" alt="Logo">
-    <div class="title-container">
-      <h1>Mwalimu Footwear</h1>
-      <div class="marquee">
-        <span>👋 WELCOME TO MWALIMU FOOTWEAR — HOME OF BEST QUALITY SNEAKERS AND OFFICIAL SHOES. Style • Comfort • Quality 👟✨</span>
+      <div class="title-container">
+        <h1>Mwalimu Footwear</h1>
+        <div class="marquee">
+          <span>👋 WELCOME TO MWALIMU FOOTWEAR — HOME OF BEST QUALITY SNEAKERS AND OFFICIAL SHOES. Style • Comfort • Quality 👟✨</span>
+        </div>
       </div>
     </div>
-  </div>
 </header>
 
-
-  <!-- Slider Section -->
-  <section class="slider">
-    <div class="slides">
-      <img src="data/images/j4red.jpg" alt="Red Jordan">
-      <img src="data/images/bg1.jpg" alt="Black Airmax">
-      <img src="data/images/bg2.jpg" alt="Naked Wolfe">
-      <img src="data/images/bg3.jpg" alt="White Samba">
-      <img src="data/images/bg4.png" alt="Blue Jordan">
-    </div>
-    
-
-
-    <div class="hero-text">
-      <h2>Step Up Your Style</h2>
-      <p>Offcial shoes, Trendy sneakers, Airmax & Jordans at unbeatable prices</p>
-      <button onclick="window.location.href='products.html'">Shop Now</button>
-    </div>
-  </section>
-  <!-- Sample Products Section -->
-<section class="sample-products">
-  <h2 class="sample-title">SAMPLE PRODUCTS</h2>
-  
-  <div class="products-grid">
-    <div class="product-card" data-id="8" data-name="Grey Airmax 90" data-price="2400" data-image="data/images/mine.jpg">
-    <div class="discount-badge">-23%</div>
-    <img src="data/images/mine.jpg" alt="Grey Airmax 90">
-    <h3>Grey Airmax 90</h3>
-    <p>Ksh 2400</p>
+<!-- Slider Section -->
+<section class="slider">
+  <div class="slides">
+    <img src="data/images/j4red.jpg" alt="Red Jordan">
+    <img src="data/images/bg1.jpg" alt="Black Airmax">
+    <img src="data/images/bg2.jpg" alt="Naked Wolfe">
+    <img src="data/images/bg3.jpg" alt="White Samba">
+    <img src="data/images/bg4.png" alt="Blue Jordan">
   </div>
 
-  <div class="product-card" data-id="9" data-name="Mangshon Aididas" data-price="3200" data-image="data/images/man.jpg">
-    <div class="discount-badge">-40%</div>
-    <img src="data/images/man.jpg" alt="Mangshon Aididas">
-    <h3>Mangshon Aididas</h3>
-    <p>Ksh 3200</p>
+  <div class="hero-text">
+    <h2>Step Up Your Style</h2>
+    <p>Official shoes, Trendy sneakers, Airmax & Jordans at unbeatable prices</p>
+    <button onclick="window.location.href='products.html'">Shop Now</button>
   </div>
-
-  <div class="product-card" data-id="10" data-name="Red and Black Jordan 4" data-price="2600" data-image="data/images/j4red.jpg">
-    <div class="discount-badge">-21%</div>
-    <img src="data/images/j4red.jpg" alt="Red and Black Jordan 4">
-    <h3>Red and Black Jordan 4</h3>
-    <p>Ksh 2600</p>
-  </div>
-  <div class="product-card" data-id="15" data-name="Smart Airmax 90" data-price="2400" data-image="data/images/kali.jpg">
-    <div class="discount-badge">-14%</div>
-    <img src="data/images/kali.jpg" alt="Smart Airmax 90">
-    <h3>Smart Airmax 90</h3>
-    <p>Ksh 2400</p>
-  </div>
-  <div class="product-card" data-id="58" data-name="Black KS-P2064" data-price="2600" data-image="data/images/38.jpg">
-    <div class="discount-badge">-6%</div>
-    <img src="data/images/38.jpg" alt="Black KS-P2064">
-    <h3>Black KS-P2064</h3>
-    <p>Ksh 2600</p> 
-  </div>
-  <div class="product-card" data-id="11" data-name="Blue and Black Jordan 4" data-price="2600" data-image="data/images/j4.jpg">
-    <div class="discount-badge">-27%</div>
-    <img src="data/images/j4.jpg" alt="Blue and Black Jordan 4">
-    <h3>Blue and Black Jordan 4</h3>
-    <p>Ksh 2600</p>
-  </div>
-
-  <div class="product-card" data-id="12" data-name="Blue and White Naked Wolfe" data-price="3100" data-image="data/images/wolf.jpg">
-    <div class="discount-badge">-19%</div>
-    <img src="data/images/wolf.jpg" alt="Blue and White Naked Wolfe">
-    <h3>Blue and White Naked Wolfe</h3>
-    <p>Ksh 3100</p>
-  </div>
-
-  <div class="product-card" data-id="13" data-name="Black and Orange Naked Wolfe" data-price="3100" data-image="data/images/wolfe.jpg">
-    <div class="discount-badge">-30%</div>
-    <img src="data/images/wolfe.jpg" alt="Black and Orange Naked Wolfe">
-    <h3>Black and Orange Naked Wolfe</h3>
-    <p>Ksh 3100</p>
-  </div>
-
-  <div class="product-card" data-id="14" data-name="Black Strips White Samba" data-price="2800" data-image="data/images/whitesamba.jpg">
-    <div class="discount-badge">-38%</div>
-    <img src="data/images/whitesamba.jpg" alt="Black Strips White Samba">
-    <h3>Black Strips White Samba</h3>
-    <p>Ksh 2800</p>
-  </div>
-
-  <div class="product-card" data-id="15" data-name="Smart Airmax 90" data-price="2400" data-image="data/images/kali.jpg">
-    <div class="discount-badge">-14%</div>
-    <img src="data/images/kali.jpg" alt="Smart Airmax 90">
-    <h3>Smart Airmax 90</h3>
-    <p>Ksh 2400</p>
-  </div>
-
-  <div class="product-card" data-id="16" data-name="Naked Wolfe Black" data-price="3100" data-image="data/images/nwb.jpg">
-    <div class="discount-badge">-41%</div>
-    <img src="data/images/nwb.jpg" alt="Naked Wolfe Black">
-    <h3>Naked Wolfe Black</h3>
-    <p>Ksh 3100</p>
-  </div>
-
-  <div class="product-card" data-id="17" data-name="New Balance Purple" data-price="2800" data-image="data/images/nbp.jpg">
-    <div class="discount-badge">-24%</div>
-    <img src="data/images/nbp.jpg" alt="New Balance Purple">
-    <h3>New Balance Purple</h3>
-    <p>Ksh 2800</p>
-  </div>
-
-  <div class="product-card" data-id="18" data-name="Airmax Luminous" data-price="2600" data-image="data/images/al.jpg">
-    <div class="discount-badge">-34%</div>
-    <img src="data/images/al.jpg" alt="Airmax Luminous">
-    <h3>Airmax Luminous</h3>
-    <p>Ksh 2600</p>
-  </div>
-
-  <div class="product-card" data-id="19" data-name="Airmax Pink Blue" data-price="2600" data-image="data/images/apb.jpg">
-    <div class="discount-badge">-20%</div>
-    <img src="data/images/apb.jpg" alt="Airmax Pink Blue">
-    <h3>Airmax Pink Blue</h3>
-    <p>Ksh 2600</p>
-  </div>
-<div class="product-card" data-id="20" data-name="Airmax Grey Yellow" data-price="2600" data-image="data/images/agy.jpg">
-    <div class="discount-badge">-18%</div>
-    <img src="data/images/agy.jpg" alt="Airmax Grey Yellow">
-    <h3>Airmax Grey Yellow</h3>
-    <p>Ksh 2600</p>
-</div>
-    <div class="product-card" data-id="1" data-name="Naked Wolfe Green White" data-price="3100" data-image="data/images/mmmm.jpg">
-    <div class="discount-badge">-32%</div>
-    <img src="data/images/mmmm.jpg" alt="Naked Wolfe Green White">
-    <h3>Naked Wolfe Green White</h3>
-    <p>Ksh 3100</p>
-  </div>
-   
-  <div class="product-card" data-id="2" data-name="Airmax 90 Grey" data-price="2500" data-image="data/images/caller.jpg">
-    <div class="discount-badge">-18%</div>
-    <img src="data/images/caller.jpg" alt="Airmax 90 Grey">
-    <h3>Airmax 90 Grey</h3>
-    <p>Ksh 2500</p>
-  </div>
-  
-
-  <div class="product-card" data-id="61" data-name="New Balance White" data-price="2600" data-image="data/images/balance.jpg">
-    <div class="discount-badge">-41%</div>
-    <img src="data/images/balance.jpg" alt="New Balance White">
-    <h3>New Balance White</h3>
-    <p>Ksh 2600</p>
-  </div>
-    <!-- Product 1 -->
-    <div class="product-card" data-id="5" data-name="Black KS-P2079" data-price="2600" data-image="data/images/5.jpg">
-      <div class="discount-badge">-14%</div>
-      <img src="data/images/5.jpg" alt="Black KS-P2079">
-      <h3>Black KS-P2079</h3>
-      <p>Ksh 2600</p>
-    </div>
-
-    <!-- Product 2 -->
-    <div class="product-card" data-id="23" data-name="Coffee KS-P2051" data-price="2600" data-image="data/images/23.jpg">
-      <div class="discount-badge">-12%</div>
-      <img src="data/images/23.jpg" alt="Coffee KS-P2051">
-      <h3>Coffee KS-P2051</h3>
-      <p>Ksh 2600</p>
-    </div>
-
-    <!-- Product 3 -->
-    <div class="product-card" data-id="11" data-name="Coffee KS-P2022" data-price="2600" data-image="data/images/11.jpg">
-      <div class="discount-badge">-9%</div>
-      <img src="data/images/11.jpg" alt="Coffee KS-P2022">
-      <h3>Coffee KS-P2022</h3>
-      <p>Ksh 2600</p>
-    </div>
-
-    <!-- Product 4 -->
-
-    <!-- Product 8 -->
-    <div class="product-card" data-id="7" data-name="Black KS-P2020" data-price="2600" data-image="data/images/7.jpg">
-      <div class="discount-badge">-10%</div>
-      <img src="data/images/7.jpg" alt="Black KS-P2020">
-      <h3>Black KS-P2020</h3>
-      <p>Ksh 2600</p>
-    </div>
-
-    <!-- Product 9 -->
-    <div class="product-card" data-id="12" data-name="Black KS-P2023" data-price="2600" data-image="data/images/12.jpg">
-      <div class="discount-badge">-6%</div>
-      <img src="data/images/12.jpg" alt="Black KS-P2023">
-      <h3>Black KS-P2023</h3>
-      <p>Ksh 2600</p>
-    </div>
-
-    <!-- Product 10 -->
-    <div class="product-card" data-id="15" data-name="Brown KS-P3420" data-price="2600" data-image="data/images/15.jpg">
-      <div class="discount-badge">-9%</div>
-      <img src="data/images/15.jpg" alt="Brown KS-P3420">
-      <h3>Brown KS-P3420</h3>
-      <p>Ksh 2600</p>
-    </div>
-      
-
-  </div>
-
-  
-  <div class="view-all-container">
-    <button onclick="window.location.href='products.html'" class="view-all-btn">View All Products</button>
-  </div>
-
 </section>
 
+<!-- Contact Banner -->
 
 
-  
 <footer class="footer">
   <div class="footer-content">
     <h2 class="footer-logo">MWALIMU FOOTWEAR</h2>
     <h3>Contact Details</h3>
-    <p>Nairobi, Kenya,<br>Official email<br>mail.mwalimufootwear.co.ke</p>
-    <p>Phone: <a href="tel:+27215543096">+254 117646714</a></p>
+    <p>Nairobi, Kenya,<br>Official email: mail.mwalimufootwear.co.ke</p>
+    <p>Phone: <a href="tel:+254117646714">+254 117646714</a></p>
     <div class="footer-links">
-      <a href="#">Smart Snikers</a> |
+      <a href="#">Smart Sneakers</a> |
       <a href="#">Official Boots</a> |
-      <a href="#">Fast Delivey</a>
+      <a href="#">Fast Delivery</a>
     </div>
-
-    <h4>We do fast deliveries and accept payment after delivey</h4>
-    
-
+    <h4>We do fast deliveries and accept payment after delivery</h4>
     <div class="social-icons">
       <a href="#"><i class="fab fa-facebook"></i></a>
       <a href="#"><i class="fab fa-twitter"></i></a>
-     <a href="https://wa.me/254117646714" target="_blank">
-  <i class="fab fa-whatsapp"></i>
-</a>
-
+      <a href="https://wa.me/254117646714" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
 </footer>
 
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("menu");
-      menu.classList.toggle("active");
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+  }
+  window.onclick = function(event) {
+    const menu = document.getElementById("menu");
+    if (!menu.contains(event.target)) {
+      menu.classList.remove("active");
     }
-
-    // Close menu if user clicks outside
-    window.onclick = function(event) {
-      const menu = document.getElementById("menu");
-      if (!menu.contains(event.target)) {
-        menu.classList.remove("active");
-      }
-    }
-  </script>
+  }
+</script>
 </body>
 </html>
