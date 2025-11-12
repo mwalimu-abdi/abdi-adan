@@ -42,7 +42,8 @@
 
     <button type="submit" style="margin-top:20px; width:100%; background:#0b8457; color:#fff; padding:28px; border:none; border-radius:18px; font-size:22px; cursor:pointer;">Submit Order ✅</button>
 
-    <button type="button" id="clearCart" style="margin-top:18px; width:100%; background:#b80f0a; color:#fff; padding:22px; border:none; border-radius:18px; font-size:20px; cursor:pointer;">🗑️ Clear Cart</button>
+    <!-- Back to Cart Button -->
+    <button type="button" id="backToCart" onclick="goBackToCart()" style="margin-top:18px; width:100%; background:#007bff; color:#fff; padding:22px; border:none; border-radius:18px; font-size:20px; cursor:pointer;">⬅ Back to Cart</button>
   </form>
 
   <p id="form-message" style="text-align:center; font-weight:bold; margin-top:25px; font-size:18px;"></p>
@@ -72,7 +73,6 @@
   const form = document.getElementById('orderForm');
   const message = document.getElementById('form-message');
   const totalInput = document.getElementById('total');
-  const clearCartBtn = document.getElementById('clearCart');
 
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -98,7 +98,6 @@
       div.style.maxWidth = '100%';
       div.style.minHeight = '380px';
 
-      // Image and size selectors
       let sizes = '';
       for (let i = 0; i < item.quantity; i++) {
         sizes += `
@@ -146,9 +145,8 @@
     }
   });
 
-  clearCartBtn.addEventListener('click', () => {
-    localStorage.removeItem('cart');
-    cart = [];
-    renderCart();
-  });
+  // Back to Cart function
+  function goBackToCart() {
+    window.location.href = "cart.html"; // change this to your cart page
+  }
 </script>
