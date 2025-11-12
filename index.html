@@ -11,8 +11,6 @@
       font-family: 'Poppins', sans-serif;
       background: #f8f9fa;
       color: #333;
-      padding: 0;
-      overflow-x: hidden;
     }
 
     /* Navbar */
@@ -44,6 +42,8 @@
       margin-left: 10px;
     }
 
+    /* Hamburger menu */
+    
     .menu-icon {
       width: 27px;
       height: 18px;
@@ -102,9 +102,8 @@
     }
     .slides img {
       width: 100%;
-      height: auto;
+      height: 400px;
       object-fit: cover;
-      display: block;
     }
     @keyframes slide {
       0% { margin-left: 0; }
@@ -143,6 +142,8 @@
       border-radius: 8px;
       cursor: pointer;
       transition: 0.3s;
+      margin-bottom: 100px;
+      
     }
     .hero-text button:hover {
       background: #ff751a;
@@ -155,41 +156,74 @@
       text-align: center;
       padding: 15px;
       font-weight: 500;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+      height: 27px;
     }
-    .contact-banner img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-    .contact-banner img:hover {
-      transform: scale(1.1);
+    .contact-banner a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .footer {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  font-family: "Poppins", sans-serif;
+    /* Footer */
+    footer {
+      background: rgb(1, 1, 1);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      margin-top: 0px;
+      height: 48px;
+      
+  
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.2rem;
+      }
+      .dropdown {
+        min-width: 180px;
+     
+      }
+    }
+    /* WhatsApp Icon Styling */
+.whatsapp-link {
+  display: inline-block;
 }
 
-.footer h2 {
-  color: #00bfff; /* bright blue for title */
-  margin-bottom: 15px;
-  font-weight: 700;
+.whatsapp-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-.footer h3 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: #fff;
+/* Optional hover effect */
+.whatsapp-icon:hover {
+  transform: scale(1.1);
 }
 
+.call-link {
+  display: inline-block;
+}
+
+.call-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  margin-left: 40px;
+  margin-top: 0%;
+  
+}
+
+/* Optional hover effect */
+.call-icon:hover {
+  transform: scale(1.1);
+}
 .footer p {
   line-height: 1.6;
   font-size: 0.95em;
@@ -199,6 +233,9 @@
 .footer a {
   color: #00bfff;
   text-decoration: none;
+}
+.footer-content {
+  background: black;
 }
 
 .footer a:hover {
@@ -224,52 +261,21 @@
   color: #00bfff;
 }
 
-    /* Marquee text */
-    .title-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      position: relative;
-    }
-    .marquee {
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      position: relative;
-      margin-top: 5px;
-    }
-    .marquee span {
-      display: inline-block;
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
-      background: linear-gradient(90deg, #ff914d, #ff3d6e, #007bff, #00ffb3, #ff914d);
-      background-size: 400%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      letter-spacing: 1.2px;
-      text-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-      animation: scrollText 13s linear infinite, colorShift 6s ease-in-out infinite;
-    }
-    @keyframes scrollText {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-    @keyframes colorShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.social-icons a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5em;
+  transition: color 0.3s;
+}
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.2rem; }
-      .dropdown { min-width: 180px; }
-    }
+.social-icons a:hover {
+  color: #00bfff;
+}
+
   </style>
 </head>
 <body>
- <header>
+  <header>
     <div class="logo-container">
       <div class="menu-container" id="menu">
         <div class="menu-icon" onclick="toggleMenu()">
@@ -279,7 +285,8 @@
         </div>
         <div class="dropdown" id="dropdown">
           <p>📞 Call: <a href="tel:+254117646714">+254117646714</a></p>
-          <p>💬 WhatsApp: <a href="https://wa.me/254117646714" target="_blank"></a></p>
+          <p>💬 WhatsApp: <a href="https://wa.me/254117646714" target="_blank" class="whatsapp-link">
+       </p>
           <a href="products.html">🛍️ Products</a>
           <p>📍 Location: Online</p>
           <a href="cart.html">🛒 Cart</a>
@@ -287,36 +294,30 @@
         </div>
       </div>
       <img src="data/images/logo.png" alt="Logo">
-      <div class="title-container">
-        <h1>Mwalimu Footwear</h1>
-        <div class="marquee">
-          <span>👋 WELCOME TO MWALIMU FOOTWEAR — HOME OF BEST QUALITY SNEAKERS AND OFFICIAL SHOES. Style • Comfort • Quality 👟✨</span>
-        </div>
-      </div>
+      <h1>Mwalimu Footwear</h1>
     </div>
-</header>
+  </header>
 
-<!-- Slider Section -->
-<section class="slider">
-  <div class="slides">
-    <img src="data/images/j4red.jpg" alt="Red Jordan">
-    <img src="data/images/bg1.jpg" alt="Black Airmax">
-    <img src="data/images/bg2.jpg" alt="Naked Wolfe">
-    <img src="data/images/bg3.jpg" alt="White Samba">
-    <img src="data/images/bg4.png" alt="Blue Jordan">
-  </div>
+  <!-- Slider Section -->
+  <section class="slider">
+    <div class="slides">
+      <img src="data/images/j4red.jpg" alt="Red Jordan">
+      <img src="data/images/bg1.jpg" alt="Black Airmax">
+      <img src="data/images/bg2.jpg" alt="Naked Wolfe">
+      <img src="data/images/bg3.jpg" alt="White Samba">
+      <img src="data/images/bg4.png" alt="Blue Jordan">
+    </div>
+    <div class="hero-text">
+      <h2>Step Up Your Style</h2>
+      <p>Trendy sneakers, Airmax & Jordans at unbeatable prices</p>
+      <button onclick="window.location.href='products.html'">Shop Now</button>
+    </div>
+  </section>
 
-  <div class="hero-text">
-    <h2>Step Up Your Style</h2>
-    <p>Official shoes, Trendy sneakers, Airmax & Jordans at unbeatable prices</p>
-    <button onclick="window.location.href='products.html'">Shop Now</button>
-  </div>
-</section>
+  <!-- Contact Banner -->
+  
 
-<!-- Contact Banner -->
-
-
-<footer class="footer">
+  <footer class="footer">
   <div class="footer-content">
     <h2 class="footer-logo">MWALIMU FOOTWEAR</h2>
     <h3>Contact Details</h3>
@@ -335,21 +336,22 @@
     </div>
   </div>
 </footer>
+</footer>
 
-<script>
-  function toggleMenu() {
-    const menu = document.getElementById("menu");
-    menu.classList.toggle("active");
-  }
-  window.onclick = function(event) {
-    const menu = document.getElementById("menu");
-    if (!menu.contains(event.target)) {
-      menu.classList.remove("active");
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
     }
-  }
-</script>
+
+    // Close menu if user clicks outside
+    window.onclick = function(event) {
+      const menu = document.getElementById("menu");
+      if (!menu.contains(event.target)) {
+        menu.classList.remove("active");
+      }
+    }
+  </script>
 </body>
 </html>
-
-
-
