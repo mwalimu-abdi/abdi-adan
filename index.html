@@ -13,6 +13,17 @@
       color: #333;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+    }
+    img.loaded {
+      opacity: 1;
+    }
+
     /* Navbar */
     header {
       display: flex;
@@ -43,7 +54,6 @@
     }
 
     /* Hamburger menu */
-    
     .menu-icon {
       width: 27px;
       height: 18px;
@@ -82,8 +92,6 @@
     .dropdown a:hover {
       background: #ff914d;
     }
-
-    /* Show dropdown when active */
     .menu-container.active .dropdown {
       display: block;
     }
@@ -143,7 +151,6 @@
       cursor: pointer;
       transition: 0.3s;
       margin-bottom: 100px;
-      
     }
     .hero-text button:hover {
       background: #ff751a;
@@ -166,15 +173,32 @@
 
     /* Footer */
     footer {
-      background: rgb(1, 1, 1);
+      background: black;
       color: white;
       text-align: center;
       padding: 20px 10px;
       font-size: 0.9rem;
       margin-top: 0px;
-      height: 48px;
-      
-  
+    }
+    .footer p, .footer h2, .footer h3, .footer h4 {
+      color: #ddd;
+      margin: 5px 0;
+    }
+    .footer a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00bfff;
     }
 
     /* Responsive */
@@ -184,94 +208,8 @@
       }
       .dropdown {
         min-width: 180px;
-     
       }
     }
-    /* WhatsApp Icon Styling */
-.whatsapp-link {
-  display: inline-block;
-}
-
-.whatsapp-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-/* Optional hover effect */
-.whatsapp-icon:hover {
-  transform: scale(1.1);
-}
-
-.call-link {
-  display: inline-block;
-}
-
-.call-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  margin-left: 40px;
-  margin-top: 0%;
-  
-}
-
-/* Optional hover effect */
-.call-icon:hover {
-  transform: scale(1.1);
-}
-.footer p {
-  line-height: 1.6;
-  font-size: 0.95em;
-  color: #ddd;
-}
-
-.footer a {
-  color: #00bfff;
-  text-decoration: none;
-}
-.footer-content {
-  background: black;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-links {
-  margin: 15px 0;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5em;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #00bfff;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5em;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #00bfff;
-}
-
   </style>
 </head>
 <body>
@@ -285,15 +223,14 @@
         </div>
         <div class="dropdown" id="dropdown">
           <p>📞 Call: <a href="tel:+254117646714">+254117646714</a></p>
-          <p>💬 WhatsApp: <a href="https://wa.me/254117646714" target="_blank" class="whatsapp-link">
-       </p>
+          <p>💬 WhatsApp: <a href="https://wa.me/254117646714" target="_blank">Chat Now</a></p>
           <a href="products.html">🛍️ Products</a>
           <p>📍 Location: Online</p>
           <a href="cart.html">🛒 Cart</a>
           <a href="about.html">ℹ️ About</a>
         </div>
       </div>
-      <img src="data/images/logo.png" alt="Logo">
+      <img src="data/images/logo.png" alt="Logo" width="40" height="40" loading="lazy">
       <h1>Mwalimu Footwear</h1>
     </div>
   </header>
@@ -301,11 +238,11 @@
   <!-- Slider Section -->
   <section class="slider">
     <div class="slides">
-      <img src="data/images/j4red.jpg" alt="Red Jordan">
-      <img src="data/images/bg1.jpg" alt="Black Airmax">
-      <img src="data/images/bg2.jpg" alt="Naked Wolfe">
-      <img src="data/images/bg3.jpg" alt="White Samba">
-      <img src="data/images/bg4.png" alt="Blue Jordan">
+      <img src="data/images/j4red.jpg" alt="Red Jordan" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg1.jpg" alt="Black Airmax" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg2.jpg" alt="Naked Wolfe" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg3.jpg" alt="White Samba" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg4.png" alt="Blue Jordan" width="1200" height="400" loading="lazy">
     </div>
     <div class="hero-text">
       <h2>Step Up Your Style</h2>
@@ -314,30 +251,26 @@
     </div>
   </section>
 
-  <!-- Contact Banner -->
-  
-
+  <!-- Footer -->
   <footer class="footer">
-  <div class="footer-content">
-    <h2 class="footer-logo">MWALIMU FOOTWEAR</h2>
-    <h3>Contact Details</h3>
-    <p>Nairobi, Kenya,<br>Official email: mail.mwalimufootwear.co.ke</p>
-    <p>Phone: <a href="tel:+254117646714">+254 117646714</a></p>
-    <div class="footer-links">
-      <a href="#">Smart Sneakers</a> |
-      <a href="#">Official Boots</a> |
-      <a href="#">Fast Delivery</a>
+    <div class="footer-content">
+      <h2 class="footer-logo">MWALIMU FOOTWEAR</h2>
+      <h3>Contact Details</h3>
+      <p>Nairobi, Kenya,<br>Official email: mail.mwalimufootwear.co.ke</p>
+      <p>Phone: <a href="tel:+254117646714">+254 117646714</a></p>
+      <div class="footer-links">
+        <a href="#">Smart Sneakers</a> |
+        <a href="#">Official Boots</a> |
+        <a href="#">Fast Delivery</a>
+      </div>
+      <h4>We do fast deliveries and accept payment after delivery</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/254117646714" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
-    <h4>We do fast deliveries and accept payment after delivery</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="https://wa.me/254117646714" target="_blank"><i class="fab fa-whatsapp"></i></a>
-    </div>
-  </div>
-</footer>
-</footer>
-
+  </footer>
 
   <script>
     function toggleMenu() {
@@ -345,13 +278,21 @@
       menu.classList.toggle("active");
     }
 
-    // Close menu if user clicks outside
     window.onclick = function(event) {
       const menu = document.getElementById("menu");
       if (!menu.contains(event.target)) {
         menu.classList.remove("active");
       }
     }
+
+    // Lazy load images smoothly
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.onload = () => img.classList.add('loaded');
+        if (img.complete) img.classList.add('loaded');
+      });
+    });
   </script>
 </body>
 </html>
