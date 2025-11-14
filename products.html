@@ -1241,6 +1241,12 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
     product.style.display = match ? 'block' : 'none';
   });
 });
+  document.addEventListener("DOMContentLoaded", () => {
+  const images = document.querySelectorAll("img");
+  images.forEach(img => {
+    img.setAttribute("loading", "lazy");
+  });
+});
 
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -1293,6 +1299,7 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 
 </body>
 </html>
+
 
 
 
