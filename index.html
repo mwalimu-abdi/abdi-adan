@@ -1,1500 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Mwalimu Footwear | Affordable Sneakers in Kenya – Airmax, Jordans, New Balance</title>
-
-  <meta name="description" content="Buy quality sneakers in Kenya at affordable prices. Mwalimu Footwear offers Airmax, Jordans, New Balance & Smart Sneakers with fast delivery and payment on delivery.">
-
-  <meta name="keywords" content="sneakers kenya, affordable sneakers kenya, airmax kenya, jordans kenya, mwalimu footwear, shoes in kenya, best sneaker shop kenya">
-
-  <link rel="canonical" href="https://mwalimufootwear.co.ke/products">
-
-  <!-- Open Graph for Facebook / WhatsApp -->
-  <meta property="og:title" content="Mwalimu Footwear - Affordable Sneakers in Kenya">
-  <meta property="og:description" content="Trending sneakers, Airmax, Jordans & more. Fast delivery and payment after delivery.">
-  <meta property="og:image" content="https://mwalimufootwear.co.ke/images/brand.jpg">
-  <meta property="og:url" content="https://mwalimufootwear.co.ke/products">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Mwalimu Footwear | Home</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f5f5f5;
       margin: 0;
-      padding: 0;
-    }
-    
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f5f5f5;
-  }
-
-.cart-link {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.cart-link:hover {
-  color: #007bff;
-}
-  .product-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 10px;
-    padding: 10px;
-    background: #f5f5f5;
-  }
-
-  .product-card {
-    background: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 10px;
-    text-align: center;
-    box-shadow: none;
-  }
-
-  .product-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: contain;
-    border: none;
-    display: block;
-    background: #fff;
-  }
-
-  .product-card h3 {
-    font-size: 14px;
-    margin: 8px 0 4px;
-    color: white;
-    font-weight: normal;
-  }
-
-  .product-card p {
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
-    margin: 0;
-  }
-
-  .discount {
-    background: #ffefeb;
-    color: #ff6600;
-    padding: 2px 6px;
-    border-radius: 4px;
-    font-size: 12px;
-    display: inline-block;
-    margin-bottom: 5px;
-  }
-  
-    /* White block like Jumia */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-      background: #ffffff;
-      padding: 10px;
-      gap: 1px;
-    }
-
-    .product-card {
-      background: #ffffff;
-      text-align: center;
-      padding: 10px;
-      border: 1px  #f5f5f5; /* thin separation line like Jumia */
-      transition: transform 0.2s ease;
-    }
-
-    .product-card:hover {
-      transform: scale(1.02);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 170px;
-      object-fit: contain;
-      border: none; /* invisible borders */
-      background: #ffffff;
-    }
-
-    .product-card h3 {
-      font-size: 14px;
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
       color: #333;
-      margin: 8px 0 4px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
     }
 
-    .product-card p {
-      color: #111;
-      font-weight: bold;
-      font-size: 14px;
-      margin: 0;
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+    }
+    img.loaded {
+      opacity: 1;
     }
 
-    .add-to-cart {
-      background: #ff9900;
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
       color: white;
-      border: none;
-      padding: 6px 10px;
-      border-radius: 4px;
-      font-size: 13px;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo-container {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    header img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-left: 10px;
+    }
+    header h1 {
+      font-size: 1.4rem;
+      color: #ff914d;
+      margin-left: 10px;
+    }
+
+    /* Hamburger menu */
+    .menu-icon {
+      width: 27px;
+      height: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       cursor: pointer;
-      margin-top: 5px;
+      margin-right: 15px;
+    }
+    .menu-icon span {
+      height: 4px;
+      background: white;
+      border-radius: 3px;
+      transition: 0.3s;
     }
 
-    .add-to-cart:hover {
-      background: #e68a00;
+    /* Dropdown Menu */
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      min-width: 220px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .dropdown a, .dropdown p {
+      display: block;
+      padding: 10px 15px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .dropdown a:hover {
+      background: #ff914d;
+    }
+    .menu-container.active .dropdown {
+      display: block;
     }
 
-    /* Make grid more compact on smaller screens */
+    /* Slider section */
+    .slider {
+      position: relative;
+      width: 100%;
+      max-height: 450px;
+      overflow: hidden;
+    }
+    .slides {
+      display: flex;
+      width: 500%;
+      animation: slide 20s infinite;
+    }
+    .slides img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    @keyframes slide {
+      0% { margin-left: 0; }
+      20% { margin-left: 0; }
+      25% { margin-left: -100%; }
+      45% { margin-left: -100%; }
+      50% { margin-left: -200%; }
+      70% { margin-left: -200%; }
+      75% { margin-left: -300%; }
+      95% { margin-left: -300%; }
+      100% { margin-left: -400%; }
+    }
+
+    /* Hero text overlay */
+    .hero-text {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+    .hero-text h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .hero-text button {
+      background: #ff914d;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-bottom: 100px;
+    }
+    .hero-text button:hover {
+      background: #ff751a;
+    }
+
+    /* Contact Banner */
+    .contact-banner {
+      background: #ff914d;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: 500;
+      height: 27px;
+    }
+    .contact-banner a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 0.9rem;
+      margin-top: 0px;
+    }
+    .footer p, .footer h2, .footer h3, .footer h4 {
+      color: #ddd;
+      margin: 5px 0;
+    }
+    .footer a {
+      color: #00bfff;
+      text-decoration: none;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00bfff;
+    }
+
+    /* Responsive */
     @media (max-width: 600px) {
-      .product-card img {
-        height: 140px;
+      header h1 {
+        font-size: 1.2rem;
       }
-      .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .dropdown {
+        min-width: 180px;
       }
     }
-   /* Top Bar */
-.top-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffffff;
-  padding: 8px 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.icon-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  object-fit: cover;
-  transition: transform 0.2s ease;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-}
-
-/* Search Bar */
-.search-bar {
-  flex: 1;
-  margin: 0 10px;
-  padding: 7px 12px;
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  font-size: 14px;
-  outline: none;
-  background: #f8f8f8;
-}
-
-.search-bar:focus {
-  border-color: #ff9900;
-  background: #fff;
-}
-/* SEARCH BAR STYLING */
-.search-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 25px 0;
-}
-
-.search-container input {
-  width: 80%;
-  max-width: 420px;
-  padding: 12px 18px;
-  border-radius: 30px;
-  border: 2px solid transparent;
-  background: #f0f0f0;
-  font-size: 16px;
-  outline: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-}
-
-.search-container input:focus {
-  background: #fff;
-  border-color: #ff9900;
-  box-shadow: 0 0 10px rgba(255,153,0,0.4);
-  transform: scale(1.02);
-}
-.discount-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: #ff6600;
-  color: white;
-  font-size: 13px;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 4px;
-  z-index: 2;
-}
-
-.product-card {
-  position: relative;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px white;
-  transition: transform 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-/* Stylish Top Bar */
-.top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #0b8457, #13a47e);
-  padding: 8px 15px;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.icon-link {
-  display: flex;
-  align-items: center;
-}
-
-.icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  transition: transform 0.2s;
-}
-
-.icon:hover {
-  transform: scale(1.1);
-}
-
-/* Search Bar Styling */
-.search-container {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  margin: 0 15px;
-}
-
-#searchBar {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px 15px;
-  border-radius: 25px;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  transition: all 0.3s ease;
-}
-
-#searchBar:focus {
-  box-shadow: 0 0 10px rgba(11,132,87,0.5);
-}
-
-/* Decorative Banner */
-.banner-strip {
-  background: linear-gradient(to right, #f7fdf9, #e6fff3);
-  text-align: center;
-  padding: 10px 0;
-  color: #0b8457;
-  border-bottom: 2px solid #0b8457;
-  margin-bottom: 15px;
-}
-
-.banner-strip h2 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.banner-strip p {
-  margin: 5px 0 0;
-  font-size: 13px;
-  color: #555;
-}
-
-.whatsapp-float {
-    position: fixed;
-    bottom: 20px;       /* Distance from bottom */
-    right: 20px;        /* Distance from right */
-    width: 60px;        /* Size of icon */
-    height: 60px;
-    z-index: 1000;      /* Stay on top */
-    border-radius: 50%; /* Make it round */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.whatsapp-float:hover {
-    transform: scale(1.1); /* Slight grow effect on hover */
-}
-
-.whatsapp-float img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    display: block;
-}
-.footer {
-  background: #000;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  font-family: "Poppins", sans-serif;
-}
-
-.footer h2 {
-  color: #00bfff; /* bright blue for title */
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.footer h3 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: #fff;
-}
-
-.footer p {
-  line-height: 1.6;
-  font-size: 0.95em;
-  color: #ddd;
-}
-
-.footer a {
-  color: #00bfff;
-  text-decoration: none;
-}
-
-.footer a:hover {
-  text-decoration: underline;
-}
-
-.footer-links {
-  margin: 15px 0;
-}
-
-.social-icons {
-  margin-top: 20px;
-}
-
-.social-icons a {
-  color: #fff;
-  margin: 0 10px;
-  font-size: 1.5em;
-  transition: color 0.3s;
-}
-
-.social-icons a:hover {
-  color: #00bfff;
-}
-
-
-
   </style>
 </head>
 <body>
-
- <!-- Stylish Top Bar -->
-<div class="top-bar">
-  <a href="index.html" class="icon-link">
-    <img src="data/images/home.jpeg" alt="Home" class="icon">
-  </a>
-
-  <div class="search-container">
-    <input type="text" id="searchBar" placeholder="🔍 Search for shoes, brands..." />
-  </div>
-
-  <a href="cart.html" class="icon-link">
-  <img src="data/images/trolley.jpeg" alt="Cart" class="icon">
-  <span id="cart-count" 
-        style="position:absolute; top:0; right:0; background:#ff914d; color:white; 
-               font-size:12px; width:18px; height:18px; border-radius:50%; 
-               display:flex; align-items:center; justify-content:center;">
-
-    <a href="https://wa.me/254728214134" target="_blank" class="whatsapp-float">
-    <img src="data/images/wasap.jpeg" alt="WhatsApp" />
-</a>
-    
-  </span>
-</a>
-
-  </span>
-</a>
-
-</div>
-
-<!-- Decorative Banner Under Top Bar -->
-<div class="banner-strip">
-  <h2>✨ Mwalimu Footwear Collection 👟</h2>
-  <p>Style • Comfort • Quality</p>
-</div>
-
-  <div class="product-grid" id="product-grid">
-
-  <div class="product-card" data-id="1" data-name="Naked Wolfe Green White" data-price="2500" data-image="data/images/mmmm.jpeg">
-    <div class="discount-badge">-32%</div>
-    <img src="data/images/mmmm.jpeg" alt="Naked Wolfe Green White" loading="lazy">
-    <h3>Naked Wolfe Green White</h3>
-    <p>Ksh 2500</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="2" data-name="Airmax 90 Grey" data-price="2500" data-image="data/images/caller.jpeg">
-    <div class="discount-badge">-18%</div>
-    <img src="data/images/caller.jpeg" alt="Airmax 90 Grey" loading="lazy">
-    <h3>Airmax 90 Grey</h3>
-    <p>Ksh 2500</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="3" data-name="Full Blak J4" data-price="2400" data-image="data/images/bj4.jpeg">
-    <div class="discount-badge">-18%</div>
-    <img src="data/images/bj4.jpeg" alt="Full Blak J4" loading="lazy">
-    <h3>Full Blak J4</h3>
-    <p>Ksh 2400</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="4" data-name="New Airmax Black And White" data-price="2400" data-image="data/images/blackairmax.jpeg">
-    <div class="discount-badge">-29%</div>
-    <img src="data/images/blackairmax.jpeg" alt="New Airmax Black And White" loading="lazy">
-    <h3>New Airmax Black And White</h3>
-    <p>Ksh 2400</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="5" data-name="New Balance Black" data-price="2600" data-image="data/images/balancew.jpeg">
-    <div class="discount-badge">-41%</div>
-    <img src="data/images/balancew.jpeg" alt="New Balance Black" loading="lazy">
-    <h3>New Balance Black</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="61" data-name="New Balance White" data-price="2600" data-image="data/images/balance.jpeg">
-    <div class="discount-badge">-41%</div>
-    <img src="data/images/balance.jpeg" alt="New Balance White" loading="lazy">
-    <h3>New Balance White</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="6" data-name="BapeStar Black and white" data-price="1900" data-image="data/images/nora.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/nora.jpeg" alt="BapeStar Black and white" loading="lazy">
-    <h3>BapeStar Black and white</h3>
-    <p>Ksh 1900</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="7" data-name="Black Airforce" data-price="2400" data-image="data/images/black.jpeg">
-    <div class="discount-badge">-25%</div>
-    <img src="data/images/black.jpeg" alt="Black Airforce" loading="lazy">
-    <h3>Black Airforce</h3>
-    <p>Ksh 2400</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="8" data-name="Grey Airmax 90" data-price="2400" data-image="data/images/mine.jpeg">
-    <div class="discount-badge">-23%</div>
-    <img src="data/images/mine.jpeg" alt="Grey Airmax 90" loading="lazy">
-    <h3>Grey Airmax 90</h3>
-    <p>Ksh 2400</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="9" data-name="Mangshon Aididas" data-price="3200" data-image="data/images/man.jpeg">
-    <div class="discount-badge">-40%</div>
-    <img src="data/images/man.jpeg" alt="Mangshon Aididas" loading="lazy">
-    <h3>Mangshon Aididas</h3>
-    <p>Ksh 3200</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="10" data-name="Red and Black Jordan 4" data-price="2400" data-image="data/images/j4red.jpeg">
-    <div class="discount-badge">-21%</div>
-    <img src="data/images/j4red.jpeg" alt="Red and Black Jordan 4" loading="lazy">
-    <h3>Red and Black Jordan 4</h3>
-    <p>Ksh 2400</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="11" data-name="Blue and Black Jordan 4" data-price="2400" data-image="data/images/j4.jpeg">
-    <div class="discount-badge">-27%</div>
-    <img src="data/images/j4.jpeg" alt="Blue and Black Jordan 4" loading="lazy">
-    <h3>Blue and Black Jordan 4</h3>
-    <p>Ksh 2400</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="111" data-name="New Jordan 4" data-price="2600" data-image="data/images/nj4.jpeg">
-    <div class="discount-badge">-27%</div>
-    <img src="data/images/nj4.jpeg" alt="New Jordan 4" loading="lazy">
-    <h3>New Jordan 4</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="112" data-name="White Jordan" data-price="2600" data-image="data/images/wj4.jpeg">
-    <div class="discount-badge">-27%</div>
-    <img src="data/images/wj4.jpeg" alt="White Jordan" loading="lazy">
-    <h3>White Jordan</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="12" data-name="Blue and White Naked Wolfe" data-price="2500" data-image="data/images/wolf.jpeg">
-    <div class="discount-badge">-19%</div>
-    <img src="data/images/wolf.jpeg" alt="Blue and White Naked Wolfe" loading="lazy">
-    <h3>Blue and White Naked Wolfe</h3>
-    <p>Ksh 2500</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="13" data-name="Black and Orange Naked Wolfe" data-price="2500" data-image="data/images/wolfe.jpeg">
-    <div class="discount-badge">-30%</div>
-    <img src="data/images/wolfe.jpeg" alt="Black and Orange Naked Wolfe" loading="lazy">
-    <h3>Black and Orange Naked Wolfe</h3>
-    <p>Ksh 2500</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="14" data-name="White Samba Black Stripes" data-price="2000" data-image="data/images/whitesamba.jpeg">
-    <div class="discount-badge">-38%</div>
-    <img src="data/images/whitesamba.jpeg" alt="White Samba Black Stripes" loading="lazy">
-    <h3>White Samba Black Stripes</h3>
-    <p>Ksh 2000</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="144" data-name="Black Samba Double sole" data-price="2000" data-image="data/images/bsw.jpeg">
-    <div class="discount-badge">-38%</div>
-    <img src="data/images/bsw.jpeg" alt="Black Samba Double sole" loading="lazy">
-    <h3>Black Samba Double sole</h3>
-    <p>Ksh 2000</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="145" data-name="White Samba Pink Stripes" data-price="2000" data-image="data/images/wsp.jpeg">
-    <div class="discount-badge">-38%</div>
-    <img src="data/images/wsp.jpeg" alt="White Samba Pink Stripes" loading="lazy">
-    <h3>White Samba Pink Stripes</h3>
-    <p>Ksh 2000</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="146" data-name="Black Samba Red Stripes" data-price="2000" data-image="data/images/bps.jpeg">
-    <div class="discount-badge">-38%</div>
-    <img src="data/images/bps.jpeg" alt="Black Samba Red Stripes" loading="lazy">
-    <h3>Black Samba Red Stripes</h3>
-    <p>Ksh 2000</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="147" data-name="Black Samba Single sole" data-price="2000" data-image="data/images/bss.jpeg">
-    <div class="discount-badge">-38%</div>
-    <img src="data/images/bss.jpeg" alt="Black Samba Single sole" loading="lazy">
-    <h3>Black Samba Single sole</h3>
-    <p>Ksh 2000</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="148" data-name="White Samba Yellow Stripes" data-price="2000" data-image="data/images/wsg.jpeg">
-    <div class="discount-badge">-38%</div>
-    <img src="data/images/wsg.jpeg" alt="White Samba Yellow Stripes" loading="lazy">
-    <h3>White Samba Yellow Stripes</h3>
-    <p>Ksh 2000</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="15" data-name="Smart Airmax 90" data-price="2400" data-image="data/images/kali.jpeg">
-    <div class="discount-badge">-14%</div>
-    <img src="data/images/kali.jpeg" alt="Smart Airmax 90" loading="lazy">
-    <h3>Smart Airmax 90</h3>
-    <p>Ksh 2400</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="16" data-name="Naked Wolfe Black" data-price="2500" data-image="data/images/nwb.jpeg">
-    <div class="discount-badge">-41%</div>
-    <img src="data/images/nwb.jpeg" alt="Naked Wolfe Black" loading="lazy">
-    <h3>Naked Wolfe Black</h3>
-    <p>Ksh 2500</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="17" data-name="New Balance Purple" data-price="2800" data-image="data/images/nbp.jpeg">
-    <div class="discount-badge">-24%</div>
-    <img src="data/images/nbp.jpeg" alt="New Balance Purple" loading="lazy">
-    <h3>New Balance Purple</h3>
-    <p>Ksh 2800</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="18" data-name="Airmax Luminous" data-price="2600" data-image="data/images/al.jpeg">
-    <div class="discount-badge">-34%</div>
-    <img src="data/images/al.jpeg" alt="Airmax Luminous" loading="lazy">
-    <h3>Airmax Luminous</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="19" data-name="Airmax Pink Blue" data-price="2600" data-image="data/images/apb.jpeg">
-    <div class="discount-badge">-20%</div>
-    <img src="data/images/apb.jpeg" alt="Airmax Pink Blue" loading="lazy">
-    <h3>Airmax Pink Blue</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="20" data-name="Airmax Grey Yellow" data-price="2600" data-image="data/images/agy.jpeg">
-    <div class="discount-badge">-18%</div>
-    <img src="data/images/agy.jpeg" alt="Airmax Grey Yellow" loading="lazy">
-    <h3>Airmax Grey Yellow</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-   <div class="product-card" data-id="21" data-name="Black KS-P2060" data-price="2600" data-image="data/images/1.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/1.jpeg" alt="Black KS-P2060" loading="lazy">
-    <h3>Black KS-P2060</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="22" data-name="Coffee KS-P2060" data-price="2600" data-image="data/images/2.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/2.jpeg" alt="Coffee KS-P2060" loading="lazy">
-    <h3>Coffee KS-P2060</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="23" data-name="Black KS-P2079" data-price="2600" data-image="data/images/3.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/3.jpeg" alt="Black KS-P2079" loading="lazy">
-    <h3>Black KS-P2079</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="24" data-name="Black KS-P2012" data-price="2600" data-image="data/images/4.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/4.jpeg" alt="Black KS-P2012" loading="lazy">
-    <h3>Black KS-P2012</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="25" data-name="Brown KS-P2012" data-price="2600" data-image="data/images/5.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/5.jpeg" alt="Brown KS-P2012" loading="lazy">
-    <h3>Brown KS-P2012</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="26" data-name="Coffee KS-P2012" data-price="2600" data-image="data/images/6.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/6.jpeg" alt="Coffee KS-P2012" loading="lazy">
-    <h3>Coffee KS-P2012</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="27" data-name="Black KS-P2020" data-price="2600" data-image="data/images/7.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/7.jpeg" alt="Black KS-P2020" loading="lazy">
-    <h3>Black KS-P2020</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="28" data-name="Brown KS-P2020" data-price="2600" data-image="data/images/8.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/8.jpeg" alt="Brown KS-P2020" loading="lazy">
-    <h3>Brown KS-P2020</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="29" data-name="Black KS-P2022" data-price="2600" data-image="data/images/9.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/9.jpeg" alt="Black KS-P2022" loading="lazy">
-    <h3>Black KS-P2022</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="30" data-name="Brown KS-P2022" data-price="2600" data-image="data/images/10.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/10.jpeg" alt="Brown KS-P2022" loading="lazy">
-    <h3>Brown KS-P2022</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="31" data-name="Coffee KS-P2022" data-price="2600" data-image="data/images/11.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/11.jpeg" alt="Coffee KS-P2022" loading="lazy">
-    <h3>Coffee KS-P2022</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="32" data-name="Black KS-P2023" data-price="2600" data-image="data/images/12.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/12.jpeg" alt="Black KS-P2023" loading="lazy">
-    <h3>Black KS-P2023</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="33" data-name="KS-P2023" data-price="2600" data-image="data/images/13.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/13.jpeg" alt="KS-P2023" loading="lazy">
-    <h3>KS-P2023</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="34" data-name="Brown KS-P2034" data-price="2600" data-image="data/images/14.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/14.jpeg" alt="Brown KS-P2034" loading="lazy">
-    <h3>Brown KS-P2034</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="35" data-name="Coffee KS-P2034" data-price="2600" data-image="data/images/15.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/15.jpeg" alt="Coffee KS-P2034" loading="lazy">
-    <h3>Coffee KS-P2034</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="36" data-name="Brown KS-P2035" data-price="2600" data-image="data/images/16.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/16.jpeg" alt="Brown KS-P2035" loading="lazy">
-    <h3>Brown KS-P2035</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="37" data-name="Coffee KS-P2035" data-price="2600" data-image="data/images/17.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/17.jpeg" alt="Coffee KS-P2035" loading="lazy">
-    <h3>Coffee KS-P2035</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="38" data-name="Black KS-P2050" data-price="2600" data-image="data/images/18.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/18.jpeg" alt="Black KS-P2050" loading="lazy">
-    <h3>Black KS-P2050</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="39" data-name="Brown KS-P2050" data-price="2600" data-image="data/images/19.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/19.jpeg" alt="Brown KS-P2050" loading="lazy">
-    <h3>Brown KS-P2050</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="40" data-name="Coffee KS-P2050" data-price="2600" data-image="data/images/20.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/20.jpeg" alt="Coffee KS-P2050" loading="lazy">
-    <h3>Coffee KS-P2050</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-
-</div>
-<div class="product-card" data-id="21" data-name="Black KS-P2060" data-price="2600" data-image="data/images/1.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/1.jpeg" alt="Black KS-P2060" loading="lazy">
-    <h3>Black KS-P2060</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="22" data-name="Coffee KS-P2060" data-price="2600" data-image="data/images/2.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/2.jpeg" alt="Coffee KS-P2060" loading="lazy">
-    <h3>Coffee KS-P2060</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="23" data-name="Black KS-P2079" data-price="2600" data-image="data/images/3.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/3.jpeg" alt="Black KS-P2079" loading="lazy">
-    <h3>Black KS-P2079</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="24" data-name="Black KS-P2012" data-price="2600" data-image="data/images/4.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/4.jpeg" alt="Black KS-P2012" loading="lazy">
-    <h3>Black KS-P2012</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="25" data-name="Brown KS-P2012" data-price="2600" data-image="data/images/5.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/5.jpeg" alt="Brown KS-P2012" loading="lazy">
-    <h3>Brown KS-P2012</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="26" data-name="Coffee KS-P2012" data-price="2600" data-image="data/images/6.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/6.jpeg" alt="Coffee KS-P2012" loading="lazy">
-    <h3>Coffee KS-P2012</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="27" data-name="Black KS-P2020" data-price="2600" data-image="data/images/7.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/7.jpeg" alt="Black KS-P2020" loading="lazy">
-    <h3>Black KS-P2020</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="28" data-name="Brown KS-P2020" data-price="2600" data-image="data/images/8.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/8.jpeg" alt="Brown KS-P2020" loading="lazy">
-    <h3>Brown KS-P2020</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="29" data-name="Black KS-P2022" data-price="2600" data-image="data/images/9.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/9.jpeg" alt="Black KS-P2022" loading="lazy">
-    <h3>Black KS-P2022</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="30" data-name="Brown KS-P2022" data-price="2600" data-image="data/images/10.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/10.jpeg" alt="Brown KS-P2022" loading="lazy">
-    <h3>Brown KS-P2022</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="31" data-name="Coffee KS-P2022" data-price="2600" data-image="data/images/11.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/11.jpeg" alt="Coffee KS-P2022" loading="lazy">
-    <h3>Coffee KS-P2022</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="32" data-name="Black KS-P2023" data-price="2600" data-image="data/images/12.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/12.jpeg" alt="Black KS-P2023" loading="lazy">
-    <h3>Black KS-P2023</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="33" data-name="KS-P2023" data-price="2600" data-image="data/images/13.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/13.jpeg" alt="KS-P2023" loading="lazy">
-    <h3>KS-P2023</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="34" data-name="Brown KS-P2034" data-price="2600" data-image="data/images/14.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/14.jpeg" alt="Brown KS-P2034" loading="lazy">
-    <h3>Brown KS-P2034</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="35" data-name="Coffee KS-P2034" data-price="2600" data-image="data/images/15.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/15.jpeg" alt="Coffee KS-P2034" loading="lazy">
-    <h3>Coffee KS-P2034</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="36" data-name="Brown KS-P2035" data-price="2600" data-image="data/images/16.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/16.jpeg" alt="Brown KS-P2035" loading="lazy">
-    <h3>Brown KS-P2035</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="37" data-name="Coffee KS-P2035" data-price="2600" data-image="data/images/17.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/17.jpeg" alt="Coffee KS-P2035" loading="lazy">
-    <h3>Coffee KS-P2035</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="38" data-name="Black KS-P2050" data-price="2600" data-image="data/images/18.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/18.jpeg" alt="Black KS-P2050" loading="lazy">
-    <h3>Black KS-P2050</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="39" data-name="Brown KS-P2050" data-price="2600" data-image="data/images/19.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/19.jpeg" alt="Brown KS-P2050" loading="lazy">
-    <h3>Brown KS-P2050</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="40" data-name="Coffee KS-P2050" data-price="2600" data-image="data/images/20.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/20.jpeg" alt="Coffee KS-P2050" loading="lazy">
-    <h3>Coffee KS-P2050</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-<div class="product-card" data-id="41" data-name="Black KS-P2051" data-price="2600" data-image="data/images/21.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/21.jpeg" alt="Black KS-P2051" loading="lazy">
-    <h3>Black KS-P2051</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="42" data-name="Brown KS-P2051" data-price="2600" data-image="data/images/22.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/22.jpeg" alt="Brown KS-P2051" loading="lazy">
-    <h3>Brown KS-P2051</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="43" data-name="Coffee KS-P2051" data-price="2600" data-image="data/images/23.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/23.jpeg" alt="Coffee KS-P2051" loading="lazy">
-    <h3>Coffee KS-P2051</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="44" data-name="KS-P2052" data-price="2600" data-image="data/images/24.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/24.jpeg" alt="KS-P2052" loading="lazy">
-    <h3>KS-P2052</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="45" data-name="Black KS-P2055" data-price="2600" data-image="data/images/25.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/25.jpeg" alt="Black KS-P2055" loading="lazy">
-    <h3>Black KS-P2055</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="46" data-name="KS-P2055" data-price="2600" data-image="data/images/26.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/26.jpeg" alt="KS-P2055" loading="lazy">
-    <h3>KS-P2055</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="47" data-name="Black KS-P2057" data-price="2600" data-image="data/images/27.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/27.jpeg" alt="Black KS-P2057" loading="lazy">
-    <h3>Black KS-P2057</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="48" data-name="Brown KS-P2057" data-price="2600" data-image="data/images/28.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/28.jpeg" alt="Brown KS-P2057" loading="lazy">
-    <h3>Brown KS-P2057</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="49" data-name="Coffee KS-P2057" data-price="2600" data-image="data/images/29.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/29.jpeg" alt="Coffee KS-P2057" loading="lazy">
-    <h3>Coffee KS-P2057</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="50" data-name="Black KS-P2059" data-price="2600" data-image="data/images/30.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/30.jpeg" alt="Black KS-P2059" loading="lazy">
-    <h3>Black KS-P2059</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="51" data-name="Brown KS-P2059" data-price="2600" data-image="data/images/31.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/31.jpeg" alt="Brown KS-P2059" loading="lazy">
-    <h3>Brown KS-P2059</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="52" data-name="Coffee KS-P2059" data-price="2600" data-image="data/images/32.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/32.jpeg" alt="Coffee KS-P2059" loading="lazy">
-    <h3>Coffee KS-P2059</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="53" data-name="Brown KS-P2060" data-price="2600" data-image="data/images/33.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/33.jpeg" alt="Brown KS-P2060" loading="lazy">
-    <h3>Brown KS-P2060</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="54" data-name="Brown KS-P2061" data-price="2600" data-image="data/images/34.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/34.jpeg" alt="Brown KS-P2061" loading="lazy">
-    <h3>Brown KS-P2061</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="55" data-name="Brown KS-P2062" data-price="2600" data-image="data/images/35.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/35.jpeg" alt="Brown KS-P2062" loading="lazy">
-    <h3>Brown KS-P2062</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="56" data-name="Coffee KS-P2062" data-price="2600" data-image="data/images/36.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/36.jpeg" alt="Coffee KS-P2062" loading="lazy">
-    <h3>Coffee KS-P2062</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="57" data-name="Brown KS-P2063" data-price="2600" data-image="data/images/37.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/37.jpeg" alt="Brown KS-P2063" loading="lazy">
-    <h3>Brown KS-P2063</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="58" data-name="Black KS-P2064" data-price="2600" data-image="data/images/38.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/38.jpeg" alt="Black KS-P2064" loading="lazy">
-    <h3>Black KS-P2064</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="59" data-name="Brown KS-P2064" data-price="2600" data-image="data/images/39.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/39.jpeg" alt="Brown KS-P2064" loading="lazy">
-    <h3>Brown KS-P2064</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="60" data-name="Coffee KS-P2064" data-price="2600" data-image="data/images/40.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/40.jpeg" alt="Coffee KS-P2064" loading="lazy">
-    <h3>Coffee KS-P2064</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-<div class="product-card" data-id="61" data-name="Black KS-P2067" data-price="2600" data-image="data/images/41.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/41.jpeg" alt="Black KS-P2067" loading="lazy">
-    <h3>Black KS-P2067</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="62" data-name="Brown KS-P2067" data-price="2600" data-image="data/images/42.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/42.jpeg" alt="Brown KS-P2067" loading="lazy">
-    <h3>Brown KS-P2067</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="63" data-name="Coffee KS-P2067" data-price="2600" data-image="data/images/43.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/43.jpeg" alt="Coffee KS-P2067" loading="lazy">
-    <h3>Coffee KS-P2067</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button> 
-</div>
-
-<div class="product-card" data-id="64" data-name="Coffee KS-P2068" data-price="2600" data-image="data/images/44.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/44.jpeg" alt="Coffee KS-P2068" loading="lazy">
-    <h3>Coffee KS-P2068</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="65" data-name="Black KS-P2068" data-price="2600" data-image="data/images/45.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/45.jpeg" alt="Black KS-P2068" loading="lazy">
-    <h3>Black KS-P2068</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="66" data-name="Black KS-P2069" data-price="2600" data-image="data/images/46.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/46.jpeg" alt="Black KS-P2069" loading="lazy">
-    <h3>Black KS-P2069</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="67" data-name="Brown KS-P2069" data-price="2600" data-image="data/images/47.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/47.jpeg" alt="Brown KS-P2069" loading="lazy">
-    <h3>Brown KS-P2069</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="68" data-name="Black KS-P2073" data-price="2600" data-image="data/images/48.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/48.jpeg" alt="Black KS-P2073" loading="lazy">
-    <h3>Black KS-P2073</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="69" data-name="Coffee KS-P2073" data-price="2600" data-image="data/images/49.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/49.jpeg" alt="Coffee KS-P2073" loading="lazy">
-    <h3>Coffee KS-P2073</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="70" data-name="Coffee KS-P20 75" data-price="2600" data-image="data/images/50.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/50.jpeg" alt="Coffee KS-P20 75" loading="lazy">
-    <h3>Coffee KS-P20 75</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="71" data-name="Black KS-P2076" data-price="2600" data-image="data/images/51.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/51.jpeg" alt="Black KS-P2076" loading="lazy">
-    <h3>Black KS-P2076</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="72" data-name="Coffee KS-P2076" data-price="2600" data-image="data/images/52.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/52.jpeg" alt="Coffee KS-P2076" loading="lazy">
-    <h3>Coffee KS-P2076</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="73" data-name="Black KS-P2077" data-price="2600" data-image="data/images/53.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/53.jpeg" alt="Black KS-P2077" loading="lazy">
-    <h3>Black KS-P2077</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="74" data-name="Coffee KS-P2077" data-price="2600" data-image="data/images/54.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/54.jpeg" alt="Coffee KS-P2077" loading="lazy">
-    <h3>Coffee KS-P2077</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="75" data-name="Coffee KS-P2079" data-price="2600" data-image="data/images/55.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/55.jpeg" alt="Coffee KS-P2079" loading="lazy">
-    <h3>Coffee KS-P2079</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="76" data-name="Black KS-P20 79" data-price="2600" data-image="data/images/56.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/56.jpeg" alt="Black KS-P20 79" loading="lazy">
-    <h3>Black KS-P20 79</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="77" data-name="Coffee KS-P2081" data-price="2600" data-image="data/images/57.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/57.jpeg" alt="Coffee KS-P2081" loading="lazy">
-    <h3>Coffee KS-P2081</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="78" data-name="Coffee KS-P2023" data-price="2600" data-image="data/images/58.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/58.jpeg" alt="Coffee KS-P2023" loading="lazy">
-    <h3>Coffee KS-P2023</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="79" data-name="KS-P2025" data-price="2600" data-image="data/images/59.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/59.jpeg" alt="KS-P2025" loading="lazy">
-    <h3>KS-P2025</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="80" data-name="Black KS-P2034" data-price="2600" data-image="data/images/60.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/60.jpeg" alt="Black KS-P2034" loading="lazy">
-    <h3>Black KS-P2034</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="81" data-name="Black KS-P2035" data-price="2600" data-image="data/images/61.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/61.jpeg" alt="Black KS-P2035" loading="lazy">
-    <h3>Black KS-P2035</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="82" data-name="Black KS-P2058" data-price="2600" data-image="data/images/62.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/62.jpeg" alt="Black KS-P2058" loading="lazy">
-    <h3>Black KS-P2058</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="83" data-name="Brown KS-P2058" data-price="2600" data-image="data/images/63.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/63.jpeg" alt="Brown KS-P2058" loading="lazy">
-    <h3>Brown KS-P2058</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-
-<div class="product-card" data-id="84" data-name="Coffee KS-P2058" data-price="2600" data-image="data/images/64.jpeg">
-    <div class="discount-badge">-16%</div>
-    <img src="data/images/64.jpeg" alt="Coffee KS-P2058" loading="lazy">
-    <h3>Coffee KS-P2058</h3>
-    <p>Ksh 2600</p>
-    <button class="add-to-cart">Add to Cart</button>
-</div>
-</div>
-<footer class="footer">
-  <div class="footer-content">
-    <h2 class="footer-logo">MWALIMU FOOTWEAR</h2>
-    <h3>Contact Details</h3>
-    <p>Nairobi, Kenya,<br>Official email: mail.mwalimufootwear.co.ke</p>
-    <p>Phone: <a href="tel:+254728214134">+254 728214134</a></p>
-    <div class="footer-links">
-      <a href="#">Smart Sneakers</a> |
-      <a href="#">Official Boots</a> |
-      <a href="#">Fast Delivery</a>
+  <header>
+    <div class="logo-container">
+      <div class="menu-container" id="menu">
+        <div class="menu-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="dropdown" id="dropdown">
+          <p>📞 Call: <a href="tel:+254728214134">0728214234</a></p>
+          <p>💬 WhatsApp: <a href="https://wa.me/254728214134" target="_blank">Chat Now</a></p>
+          <a href="products.html">🛍️ Products</a>
+          <p>📍 Location: Online</p>
+          <a href="cart.html">🛒 Cart</a>
+          <a href="about.html">ℹ️ About</a>
+        </div>
+      </div>
+      <img src="data/images/logo.jpeg" alt="Logo" width="40" height="40" loading="lazy">
+      <h1>Mwalimu Footwear</h1>
     </div>
-    <h4>We do fast deliveries and accept payment after delivery</h4>
-    <div class="social-icons">
-      <a href="#"><i class="fab fa-facebook"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="https://wa.me/254728214134" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </header>
+
+  <!-- Slider Section -->
+  <section class="slider">
+    <div class="slides">
+      <img src="data/images/j4red.jpeg" alt="Red Jordan" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg1.jpeg" alt="Black Airmax" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg2.jpeg" alt="Naked Wolfe" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg3.jpeg" alt="White Samba" width="1200" height="400" loading="lazy">
+      <img src="data/images/bg4.jpeg" alt="Blue Jordan" width="1200" height="400" loading="lazy">
     </div>
-  </div>
-</footer>
+    <div class="hero-text">
+      <h2>Step Up Your Style</h2>
+      <p>Trendy sneakers, Airmax & Jordans at unbeatable prices</p>
+      <button onclick="window.location.href='products.html'">Shop Now</button>
+    </div>
+  </section>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h2 class="footer-logo">MWALIMU FOOTWEAR</h2>
+      <h3>Contact Details</h3>
+      <p>Nairobi, Kenya,<br>Official email: mail.mwalimufootwear.co.ke</p>
+      <p>Phone: <a href="tel:0728214134">+254 728214134</a></p>
+      <div class="footer-links">
+        <a href="#">Smart Sneakers</a> |
+        <a href="#">Official Boots</a> |
+        <a href="#">Fast Delivery</a>
+      </div>
+      <h4>We do fast deliveries and accept payment after delivery</h4>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://wa.me/254 728214134" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="about.html">ℹ️ </a>
+      </div>
+    </div>
+  </footer>
 
-<script>
-// Simple Add to Cart System (stores data in localStorage)
-document.querySelectorAll('.add-to-cart').forEach(button => {
-  button.addEventListener('click', function() {
-    const productCard = this.closest('.product-card');
-    const id = productCard.dataset.id;
-    const name = productCard.dataset.name;
-    const price = productCard.dataset.price;
-    const image = productCard.dataset.image;
-
-    // Retrieve existing cart or create new
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Check if product already exists
-    const existingItem = cart.find(item => item.id === id);
-    if (existingItem) {
-      existingItem.quantity += 1; // increase quantity
-    } else {
-      cart.push({ id, name, price, image, quantity: 1 });
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
     }
 
-    // Save back to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Small visual feedback
-    this.textContent = '✔ Added';
-    this.style.background = '#28a745';
-    setTimeout(() => {
-      this.textContent = 'Add to Cart';
-      this.style.background = '#ff9900';
-    }, 1000);
-  });
-});
-
-
-
-// SEARCH FILTER FUNCTION
-document.getElementById('searchBar').addEventListener('keyup', function() {
-  const searchValue = this.value.toLowerCase();
-  const products = document.querySelectorAll('.product-card');
-
-  products.forEach(product => {
-    const name = product.dataset.name.toLowerCase();
-    const match = name.includes(searchValue);
-    product.style.display = match ? 'block' : 'none';
-  });
-});
-  document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll("img");
-  images.forEach(img => {
-    img.setAttribute("loading", "lazy");
-  });
-});
-
-function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-    document.getElementById('cart-count').textContent = totalItems;
-}
-
-// Call once on page load
-updateCartCount();
-
-// Add to Cart button
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    // Remove previous click listeners (if any) to prevent doubling
-    button.replaceWith(button.cloneNode(true));
-});
-type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "Mwalimu Footwear",
-    "url": "https://mwalimufootwear.co.ke",
-    "logo": "https://mwalimufootwear.co.ke/images/logo.png",
-    "sameAs": [
-      "https://www.facebook.com/yourpage",
-      "https://wa.me/254728214134"
-    ],
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Nairobi",
-      "addressCountry": "Kenya"
+    window.onclick = function(event) {
+      const menu = document.getElementById("menu");
+      if (!menu.contains(event.target)) {
+        menu.classList.remove("active");
+      }
     }
-  }
 
-document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', function() {
-        const card = this.closest('.product-card');
-        const id = card.dataset.id;
-        const name = card.dataset.name;
-        const price = card.dataset.price;
-        const image = card.dataset.image;
-
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        const existing = cart.find(item => item.id === id);
-
-        if (existing) {
-            existing.quantity += 1; // only +1 per click
-        } else {
-            cart.push({ id, name, price, image, quantity: 1 });
-        }
-
-        localStorage.setItem('cart', JSON.stringify(cart));
-        updateCartCount(); // immediately update icon
-
-        // Visual feedback
-        this.textContent = '✔ Added';
-        this.style.background = '#28a745';
-        setTimeout(() => {
-            this.textContent = 'Add to Cart';
-            this.style.background = '#ff9900';
-        }, 800);
+    // Lazy load images smoothly
+    document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        img.onload = () => img.classList.add('loaded');
+        if (img.complete) img.classList.add('loaded');
+      });
     });
-});
-
-</script>
-
-
-
+  </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 
 
